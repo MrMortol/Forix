@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token" content="UU5SU0RVLVAHexQAcR5XJBt/JBVxbXUgPC0dIw0PfgIdAiVkG2RpYg==">
+    <title>Россия Дрифт | Играй в GTA Криминальная Россия с друзьями!</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;amp;subset=cyrillic" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0css/font-awesome.min.css" rel="stylesheet">
+<link href="css/style.min.css" rel="stylesheet"></head>
+<body class="bg-1">
+
+    <div class="mobile-bar">
+        <div class="text-right"><button class="open-bar"></button></div>
+    </div>
+    <div class="overlay"></div>
+    <div class="clearfix">
+        <div class="sidebar">
+    <div class="sidebar__logo">
+        <img src="images/logo-sidebar.png" alt="Россия Дрифт CRMP Logo">
+    </div>
+    <hr class="sidebar__divider">
+    <ul class="sidebar__nav">
+					<li style="text-align:center">
+				<img src="images/sidebar__userpic_nonauth.jpg" class="sidebar__nologinpic" alt="">
+				<a href="/profile/login" class="sidebar__login">Войти</a>
+			</li>
+		
+        <li><a class="sidebar__link sidebar__link_home" href="/">Главная</a></li>
+        <li><a class="sidebar__link sidebar__link_news" href="/news">Новости</a></li>
+        <li><a class="sidebar__link sidebar__link_hts" href="/how-to-start">Как начать игру</a></li>
+        <li><a class="sidebar__link sidebar__link_forum" href="http://forum.radmir-rp.ru">Форум</a></li>
+        <li><a class="sidebar__link sidebar__link_shop" href="/pay">Магазин</a></li>
+        <li><a class="sidebar__link sidebar__link_vk" href="https://vk.com/rd.rdmpru">Вконтакте</a></li>
+        <li class="sidebar__active-line"></li>
+    </ul>
+</div>
+<script>
+	var loc = document.location.pathname;
+	var ul = document.getElementsByClassName('sidebar__nav')[0];
+	var links = ul.getElementsByTagName('a');
+	var set = false;
+	if(loc == '/') {
+		links[1].className = links[1].className + ' sidebar__link_active';
+	}
+	else {
+		var re = new RegExp('('+loc+')');
+		for(var i in links) {
+			if(re.exec(links[i].href) != null) {
+				links[i].className = links[i].className + ' sidebar__link_active';
+				set = true;
+				break;
+			}
+		}
+		if(!set) links[0].className = links[0].className + ' sidebar__link_active';
+	}
+</script>
+
+
+
+
+        <div class="content-container"><script>var labels1 = ["11 Apr","12 Apr","13 Apr","14 Apr","15 Apr","16 Apr","17 Apr","19 Apr","20 Apr","21 Apr"],values1 = [130,126,127,164,289,299,246,207,209,225];</script>
+<script>var labels2 = ["11 Apr","12 Apr","13 Apr","14 Apr","15 Apr","16 Apr","17 Apr","19 Apr","20 Apr","21 Apr"],values2 = [118,120,126,151,257,242,196,165,166,172];</script>
+<style>
+    .nav-tabs {
+        border:0;
+    }
+    .nav-tabs>li>a {
+        border:0;
+        border-radius:0;
+        color:#c2c2c2;
+        font-weight:bold;
+    }
+    .nav-tabs>li>a:hover {
+        background:transparent;
+    }
+    .nav-tabs>li.active>a,.nav-tabs>li.active>a:focus,.nav-tabs>li.active>a:hover {
+        border:0;
+    }
+</style>
+
+<div class="homepage-logo">
+    <img src="images/logo-homepage.png" alt="Логотип Radmir CRMP">
+</div>
+<div class="about-project">
+    <p>Мы постарались объединить лучшие элементы ролевой игры CR-MP с новыми идеями и широкими возможностями для всех игроков. Поселившись в одном из городов и став полноправным гражданином, Вы сможете выбрать любимую работу, а может быть открыть свое небольшое дело и иметь постоянный доход. А быть может Вам захочется вступить в одну из организаций и начать карьерный рост, пока не достигнете желаемой высоты. Став известным и уважаемым человеком, вступив в ряды правительства, появится возможность подать заявку на участие в президентских выборах. Набрав большинство голосов населения, и став Президентом, вы сможете самостоятельно управлять жизнью в стране, издавать законы и управлять всеми гос. организациями. Это лишь один из множества вариантов, который возможен при игре на нашем сервере. Вы всегда можете изменить свои позиции, попробовать себя в другой роли и в других ситуациях.</p>
+</div>
+
+<div class="row" style="margin-top:40px;margin-bottom:15px">
+    <div class="col-xs-12 col-sm-6 page-title">Общий мониторинг проекта</div>
+    <div class="hidden-xs col-sm-6 page-subtitle">Статистика всего проекта</div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12 col-md-8">
+        <div class="panel">
+            <div class="panel-body">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#stat-server1" aria-control="stat-server1" data-toggle="tab">Сервер I</a></li>
+                    <li role="presentation"><a href="#stat-server2" aria-control="stat-server2" data-toggle="tab">Сервер II</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="stat-server1"><canvas height="150" width="656" id="online-chart-1"></canvas></div>
+                    <div class="tab-pane" id="stat-server2"><canvas height="150" width="656" id="online-chart-2"></canvas></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+        <div class="panel">
+            <div class="panel-body">
+                <ul class="nav nav-tabs" role="tablist" style="margin-left:-15px">
+                    <li role="presentation" class="active"><a href="#info-server1" aria-control="info-server1" data-toggle="tab">Сервер I</a></li>
+                    <li role="presentation"><a href="#info-server2" aria-control="info-server2" data-toggle="tab">Сервер II</a></li>
+                    <li role="presentation"><a href="#info-server3" aria-control="info-server3" data-toggle="tab">Сервер III</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="info-server1">
+                        <div class="row stat">
+                            <div class="col-xs-8 stat__key">Сейчас на сервере</div>
+                            <div class="col-xs-4 stat__value">394</div>
+                        </div>                
+                        <div class="row stat">
+                            <div class="col-xs-8 stat__key">Максимальный онлайн</div>
+                            <div class="col-xs-4 stat__value">500</div>
+                        </div>
+                        <div class="row stat">
+                            <div class="col-xs-8 stat__key">Среднесуточный онлайн</div>
+                            <div class="col-xs-4 stat__value">193</div>
+                        </div>
+                        <div class="row stat">
+                            <div class="col-xs-8 stat__key">Администраторов онлайн</div>
+                            <div class="col-xs-4 stat__value">18</div>
+                        </div>
+                        <div class="row stat">
+                            <div class="col-xs-8 stat__key">Аккаунтов зарегистрировано</div>
+                            <div class="col-xs-4 stat__value">69654</div>
+                        </div>
+                        <div class="row stat">
+                            <div class="col-xs-8 stat__key">Валютные операции</div>
+                            <div class="col-xs-4 stat__value">79056</div>
+                        </div>                                  
+                    </div>
+                    <div class="tab-pane" id="info-server2">
+                        <div class="row stat">
+                            <div class="col-xs-8 stat__key">Сейчас на сервере</div>
+                            <div class="col-xs-4 stat__value">320</div>
+                        </div>                
+                        <div class="row stat">
+                            <div class="col-xs-8 stat__key">Максимальный онлайн</div>
+                            <div class="col-xs-4 stat__value">500</div>
+                        </div>
+                        <div class="row stat">
+                            <div class="col-xs-8 stat__key">Среднесуточный онлайн</div>
+                            <div class="col-xs-4 stat__value">172</div>
+                        </div>
+                        <div class="row stat">
+                            <div class="col-xs-8 stat__key">Администраторов онлайн</div>
+                            <div class="col-xs-4 stat__value">21</div>
+                        </div>
+                        <div class="row stat">
+                            <div class="col-xs-8 stat__key">Аккаунтов зарегистрировано</div>
+                            <div class="col-xs-4 stat__value">47567</div>
+                        </div>
+                        <div class="row stat">
+                            <div class="col-xs-8 stat__key">Валютные операции</div>
+                            <div class="col-xs-4 stat__value">60617</div>
+                        </div>                                  
+                    </div>
+                    <div class="tab-pane" id="info-server3">
+                        <div class="row stat">
+                            <div class="col-xs-8 stat__key">Сейчас на сервере</div>
+                            <div class="col-xs-4 stat__value">240</div>
+                        </div>                
+                        <div class="row stat">
+                            <div class="col-xs-8 stat__key">Максимальный онлайн</div>
+                            <div class="col-xs-4 stat__value">500</div>
+                        </div>
+                        <div class="row stat">
+                            <div class="col-xs-8 stat__key">Среднесуточный онлайн</div>
+                            <div class="col-xs-4 stat__value">152</div>
+                        </div>
+                        <div class="row stat">
+                            <div class="col-xs-8 stat__key">Администраторов онлайн</div>
+                            <div class="col-xs-4 stat__value">24</div>
+                        </div>
+                        <div class="row stat">
+                            <div class="col-xs-8 stat__key">Аккаунтов зарегистрировано</div>
+                            <div class="col-xs-4 stat__value">35155</div>
+                        </div>
+                        <div class="row stat">
+                            <div class="col-xs-8 stat__key">Валютные операции</div>
+                            <div class="col-xs-4 stat__value">56387</div>
+                        </div>                                  
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="margin-top:40px;margin-bottom:15px">
+    <div class="col-xs-12 col-sm-6 page-title">Последние новости</div>
+    <div class="hidden-xs col-sm-6 page-subtitle">Самые свежие новости проекта</div>
+</div>
+
+<div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="post">
+                                <div class="post__image" style="background-image:url(https://pp.userapi.com/c638318/v638318909/3e2a1/dtBSZjVa1oM.jpg)">
+<!--                    <div class="post__title"><span>Выпуск модпака для проекта</span></div> -->
+                </div>
+                <div class="post__content">
+                    <p>У нас отличные новости для Вас ! <br> А именно для тех ,кто из-за неприлежной работы рассылки не смог получить письмо с кодом подтверждения и восстановить свой игровой аккаунт.<br>Теперь рассылка работает должным образом и проблем с восстановлением доступа к аккаунту не возникнет.Код подтверждения приходит без задержек.<br>Не забываем ,что и обезопасить свой аккаунт пин-кодом не будет проблемой !</p>
+                    <div class="post__content-bg"></div>
+                </div>
+                <div class="post__info">
+                    <div class="row">
+                        <div class="col-xs-6"><span class="post__create">21.04 01:12</span></div>
+                        <div class="col-xs-6 text-right"><a href="https://vk.com/rd.rdmpru?w=wall-127042464_11798" target="_blank" class="post__link">Подробнее</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="post">
+                                <div class="post__image" style="background-image:url(https://pp.userapi.com/c638624/v638624273/2fb7f/fm7emlHhetY.jpg)">
+<!--                    <div class="post__title"><span>Выпуск модпака для проекта</span></div> -->
+                </div>
+                <div class="post__content">
+                    <p>Выпущено обновление мода v2.5.8.<br><br>Изменения:<br>- Добавлены новые дома и подъезды в Арзамасе;<br>- Изменены цены и класс некоторых автомобилей в автосалонах;<br>- Проведены работы по настройке почтового сервера. В скором времени заработает привязка почты;<br>- Броня теперь защищает от урона из огнестрельного оружия;<br>- Исправлено застревание транспорта организации ТРК в заборе;</p>
+                    <div class="post__content-bg"></div>
+                </div>
+                <div class="post__info">
+                    <div class="row">
+                        <div class="col-xs-6"><span class="post__create">19.04 20:44</span></div>
+                        <div class="col-xs-6 text-right"><a href="https://vk.com/rd.rdmpru?w=wall-127042464_11788" target="_blank" class="post__link">Подробнее</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="post">
+                                <div class="post__image" style="background-image:url(https://pp.userapi.com/c636425/v636425167/7030d/OC9Pqy3u9Zw.jpg)">
+<!--                    <div class="post__title"><span>Выпуск модпака для проекта</span></div> -->
+                </div>
+                <div class="post__content">
+                    <p>По вашим наблюдениям и пожеланиям мы постарались оперативно исправить все ошибки в нашем модпаке . И уже доступна версия с устранением всех ошибок. <br>Добавлены новые элементы тюнинга на некоторые авто , так-же обновили пак дисков исходя из ваших пожеланий и интересов . <br>Скачивание доступно по ссылкам ниже, а так-же по ссылкам в официальных группах. <br>https://yadi.sk/d/vWsylCi-3H5NEX <br>https://drive.google.com/file/d/0B5ldZrcSMrZkMUhWSEt2SlBkUkk/view <br>https://cloud.mail.ru/public/Ja8q/6kiCmoSg5 <br> <br>Мы работаем для Вас!</p>
+                    <div class="post__content-bg"></div>
+                </div>
+                <div class="post__info">
+                    <div class="row">
+                        <div class="col-xs-6"><span class="post__create">17.04 21:29</span></div>
+                        <div class="col-xs-6 text-right"><a href="https://vk.com/rd.rdmpru?w=wall-127042464_11779" target="_blank" class="post__link">Подробнее</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="post">
+                                <div class="post__image" style="background-image:url(https://pp.userapi.com/c837132/v837132719/34bf1/iB-CEGpmjwg.jpg)">
+<!--                    <div class="post__title"><span>Выпуск модпака для проекта</span></div> -->
+                </div>
+                <div class="post__content">
+                    <p>В честь Пасхи мы приготовили для вас особое мероприятие, за которое вы сможете получить приятные бонусы! Начиная с этого момента на серверах каждые 30 минут будут появляться пасхальные яйца в различных местах. Ваша цель - найти как можно больше яиц и отнести их в церковь, где вы и получите ваш подарок.<br><br>Хочешь присоединиться? Тогда тебе сюда! - goo.gl/9JBt2B<br>01 Сервер IP: 83.222.105.54:8358 <br>02 Сервер IP: 83.222.105.54:8358 <br>03 Сервер IP: 83.222.105.57:7191</p>
+                    <div class="post__content-bg"></div>
+                </div>
+                <div class="post__info">
+                    <div class="row">
+                        <div class="col-xs-6"><span class="post__create">16.04 08:42</span></div>
+                        <div class="col-xs-6 text-right"><a href="https://vk.com/rd.rdmpru?w=wall-127042464_11763" target="_blank" class="post__link">Подробнее</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="post">
+                                <div class="post__image" style="background-image:url(https://pp.userapi.com/c837130/v837130719/5c3c7/ldGS6ZkyBFQ.jpg)">
+<!--                    <div class="post__title"><span>Выпуск модпака для проекта</span></div> -->
+                </div>
+                <div class="post__content">
+                    <p>Параллельно с выходом обновления с тюнингом, выходит и обновленный модпак версии 3.0! Так-же напоминаем что действует промокод "PASKA", а так-же акция х2!<br>ССЫЛКИ НА СКАЧИВАНИЕ ПАКА:<br>https://yadi.sk/d/RPRDKhee3GwpEK<br>https://cloud.mail.ru/public/8i5p/T96Cvw8Hx<br>https://drive.google.com/file/d/0B5ldZrcSMrZkanc4NVZ0ek9JY3c/view<br><br>Мы работаем для Вас!</p>
+                    <div class="post__content-bg"></div>
+                </div>
+                <div class="post__info">
+                    <div class="row">
+                        <div class="col-xs-6"><span class="post__create">15.04 07:46</span></div>
+                        <div class="col-xs-6 text-right"><a href="https://vk.com/rd.rdmpru?w=wall-127042464_11737" target="_blank" class="post__link">Подробнее</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="post">
+                                <div class="post__image" style="background-image:url(https://pp.userapi.com/c837130/v837130719/5c315/U494_FpGenc.jpg)">
+<!--                    <div class="post__title"><span>Выпуск модпака для проекта</span></div> -->
+                </div>
+                <div class="post__content">
+                    <p>Друзья! В честь предстоящих праздников, а так-же скорого выхода обновления! Запускаем промокод " PASKA " отыграв 6 часов вы получите 100.000 ИГРОВОЙ ВАЛЮТЫ. Так-же теперь действует акция х2 на 7 дней! <br>Сейчас самое время начать играть на RADMIR RP! Спасибо что Вы с нами!<br><br>01 Сервер IP: 83.222.105.54:8358 <br>02 Сервер IP: 83.222.105.54:8358 <br>03 Сервер IP: 83.222.105.57:7191 <br>КАК НАЧАТЬ ИГРАТЬ: http://r-rp.ru/how-to-start</p>
+                    <div class="post__content-bg"></div>
+                </div>
+                <div class="post__info">
+                    <div class="row">
+                        <div class="col-xs-6"><span class="post__create">14.04 15:46</span></div>
+                        <div class="col-xs-6 text-right"><a href="https://vk.com/rd.rdmpru?w=wall-127042464_11727" target="_blank" class="post__link">Подробнее</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+             
+</div>  </div>
+    </div>
+
+<!-- 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+ -->
+
+
+<script src="/js/chart.min.js"></script>
+<script src="js/graph.js?2"></script>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/yii.js"></script>
+<script src="js/script.js"></script></body>
+</html>

@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token" content="ODFYa200bmpuBB44WH8UHnIALi1YDDYaVVIXGyRuPTh0fS9cMgUqWA==">
+    <title>Not Found (#404)</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;amp;subset=cyrillic" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0css/font-awesome.min.css" rel="stylesheet">
+<link href="css/style.min.css" rel="stylesheet"></head>
+<body class="bg-1">
+
+    <div class="mobile-bar">
+        <div class="text-right"><button class="open-bar"></button></div>
+    </div>
+    <div class="overlay"></div>
+    <div class="clearfix">
+        <div class="sidebar">
+    <div class="sidebar__logo">
+        <img src="images/logo-sidebar.png" alt="Россия Дрифт CRMP Logo">
+    </div>
+    <hr class="sidebar__divider">
+    <ul class="sidebar__nav">
+					<li style="text-align:center">
+				<img src="images/sidebar__userpic_nonauth.jpg" class="sidebar__nologinpic" alt="">
+				<a href="/profile/login" class="sidebar__login">Войти</a>
+			</li>
+		
+        <li><a class="sidebar__link sidebar__link_home" href="/">Главная</a></li>
+        <li><a class="sidebar__link sidebar__link_news" href="/news">Новости</a></li>
+        <li><a class="sidebar__link sidebar__link_hts" href="/how-to-start">Как начать игру</a></li>
+        <li><a class="sidebar__link sidebar__link_forum" href="http://forum.radmir-rp.ru">Форум</a></li>
+        <li><a class="sidebar__link sidebar__link_shop" href="/pay">Магазин</a></li>
+        <li><a class="sidebar__link sidebar__link_vk" href="https://vk.com/rd.rdmpru">Вконтакте</a></li>
+        <li class="sidebar__active-line"></li>
+    </ul>
+</div>
+<script>
+	var loc = document.location.pathname;
+	var ul = document.getElementsByClassName('sidebar__nav')[0];
+	var links = ul.getElementsByTagName('a');
+	var set = false;
+	if(loc == '/') {
+		links[1].className = links[1].className + ' sidebar__link_active';
+	}
+	else {
+		var re = new RegExp('('+loc+')');
+		for(var i in links) {
+			if(re.exec(links[i].href) != null) {
+				links[i].className = links[i].className + ' sidebar__link_active';
+				set = true;
+				break;
+			}
+		}
+		if(!set) links[0].className = links[0].className + ' sidebar__link_active';
+	}
+</script>
+
+
+
+
+        <div class="content-container"><div class="row" style="margin-top:40px;margin-bottom:15px">
+    <div class="col-xs-12 col-sm-6 page-title">Not Found (#404)</div>
+    <div class="hidden-xs col-sm-6 page-subtitle">Ошибка сервера</div>
+</div>
+<div class="panel">
+    <div class="panel-body">
+        <div class="alert alert-danger">
+            Страница не найдена.        </div>
+        <p>При загрузке страницы возникла ошибка. Возможно, Вы неверно ввели адрес.</p>
+        <p>Для решения этой проблемы, пожалуйста, сообщите нам об этом.</p>
+    </div>
+</div></div>
+    </div>
+
+<!-- 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+ -->
+
+
+<script src="js/jquery.js"></script>
+<script src="js/yii.js"></script>
+<script src="js/script.js"></script></body>
+</html>

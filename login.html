@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token" content="WTFqUVJEWGMPBCwCZw8iFxMAHBdnfAATNFIlIRseCzEVfR1mDXUcUQ==">
+    <title>Личный кабинет - Вход - Россия Дрифт</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;amp;subset=cyrillic" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0css/font-awesome.min.css" rel="stylesheet">
+<link href="css/style.min.css" rel="stylesheet">
+<script src="//www.google.com/recaptcha/api.js?hl=ru" async defer></script></head>
+<body class="bg-1">
+<script type="text/javascript">var recaptchaCallback = function(response){jQuery('#loginform-recaptcha').val(response);};
+var recaptchaExpiredCallback = function(){jQuery('#loginform-recaptcha').val('');};</script>
+    <div class="mobile-bar">
+        <div class="text-right"><button class="open-bar"></button></div>
+    </div>
+    <div class="overlay"></div>
+    <div class="clearfix">
+        <div class="sidebar">
+    <div class="sidebar__logo">
+        <img src="images/logo-sidebar.png" alt="Россия Дрифт CRMP Logo">
+    </div>
+    <hr class="sidebar__divider">
+    <ul class="sidebar__nav">
+					<li style="text-align:center">
+				<img src="images/sidebar__userpic_nonauth.jpg" class="sidebar__nologinpic" alt="">
+				<a href="/profile/login" class="sidebar__login">Войти</a>
+			</li>
+		
+        <li><a class="sidebar__link sidebar__link_home" href="/">Главная</a></li>
+        <li><a class="sidebar__link sidebar__link_news" href="/news">Новости</a></li>
+        <li><a class="sidebar__link sidebar__link_hts" href="/how-to-start">Как начать игру</a></li>
+        <li><a class="sidebar__link sidebar__link_forum" href="http://forum.radmir-rp.ru">Форум</a></li>
+        <li><a class="sidebar__link sidebar__link_shop" href="/pay">Магазин</a></li>
+        <li><a class="sidebar__link sidebar__link_vk" href="https://vk.com/rd.rdmpru">Вконтакте</a></li>
+        <li class="sidebar__active-line"></li>
+    </ul>
+</div>
+<script>
+	var loc = document.location.pathname;
+	var ul = document.getElementsByClassName('sidebar__nav')[0];
+	var links = ul.getElementsByTagName('a');
+	var set = false;
+	if(loc == '/') {
+		links[1].className = links[1].className + ' sidebar__link_active';
+	}
+	else {
+		var re = new RegExp('('+loc+')');
+		for(var i in links) {
+			if(re.exec(links[i].href) != null) {
+				links[i].className = links[i].className + ' sidebar__link_active';
+				set = true;
+				break;
+			}
+		}
+		if(!set) links[0].className = links[0].className + ' sidebar__link_active';
+	}
+</script>
+
+
+
+
+        <div class="content-container"><div class="row" style="margin-top:20px;margin-bottom:20px">
+    <div class="col-xs-12 col-sm-6 page-title">Личный кабинет</div>
+    <div class="hidden-xs col-sm-6 page-subtitle">Авторизация</div>
+</div>
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <div class="panel">
+            <div class="panel-heading">Авторизация</div>
+            <div class="panel-body" style="padding-top:0">
+                <div class="form__info">
+                    <div class="auth-welcome">Добро пожаловать!</div>
+                </div>
+                              
+                    <form id="login-form" action="/profile/login" method="post">
+<input type="hidden" name="_csrf" value="WTFqUVJEWGMPBCwCZw8iFxMAHBdnfAATNFIlIRseCzEVfR1mDXUcUQ==">                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2" style="padding:0">
+                                <div class=" field-loginform-server">
+<div class='form-group'><div class='form-addon form-addon_location'></div><select id="loginform-server" class="form-input" name="LoginForm[server]">
+<option value="0">Выберите сервер</option>
+<option value="1">Сервер I</option>
+<option value="2">Сервер II</option>
+<option value="3">Сервер III</option>
+</select></div><div class="form-error"></div>
+</div>
+                                <div class=" field-loginform-username required">
+<div class='form-group'><div class='form-addon form-addon_user'></div><input type="text" id="loginform-username" class="form-input" name="LoginForm[username]" placeholder="Введите никнейм" aria-required="true"></div><div class="form-error"></div>
+</div>
+                                <div class=" field-loginform-password required">
+<div class='form-group'><div class='form-addon form-addon_password'></div><input type="password" id="loginform-password" class="form-input" name="LoginForm[password]" placeholder="Введите пароль" aria-required="true"></div><div class="form-error"></div>
+</div>
+                                <div style="width:304px;margin-left:-47px;margin-top:25px">
+                                    <div class=" field-loginform-recaptcha required">
+<input type="hidden" id="loginform-recaptcha" name="LoginForm[reCaptcha]"><div class="g-recaptcha" data-sitekey="6Ld14BMUAAAAAJKDX29UwlpJU3Qb6qap1gEQxPUv" data-callback="recaptchaCallback" data-expired-callback="recaptchaExpiredCallback"></div>
+<div style='margin-top:15px'><div class="form-error"></div></div>
+</div>                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center" style="margin-top:20px;font-weight:bold;margin-bottom:10px">Войти</div>
+                        <div class="text-center">
+                            <button type="submit" class="submit-button">По паролю</button>
+                            <style>.submit-button:hover{color:white;}</style>
+                            <a class="submit-button" href="/vk/auth" style="margin-left:5px;background:#507299"><span class="fa fa-vk" style="margin-right:7px;font-size:20px;vertical-align:text-bottom"></span>Через ВК</a>
+                        </div>
+                        <div class="text-center" style="margin-top:10px"><a class="lose-password-link" href="/recovery/password">Забыл пароль?</a></div>                   
+                    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    </div>
+
+<!-- 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+ -->
+
+
+<script src="js/jquery.js"></script>
+<script src="js/yii.js"></script>
+<script src="js/yii.validation.js"></script>
+<script src="js/yii.activeForm.js"></script>
+<script src="js/script.js"></script>
+<script type="text/javascript">jQuery(document).ready(function () {
+jQuery('#login-form').yiiActiveForm([{"id":"loginform-server","name":"server","container":".field-loginform-server","input":"#loginform-server","error":".form-error","validate":function (attribute, value, messages, deferred, $form) {yii.validation.number(value, messages, {"pattern":/^\s*[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?\s*$/,"message":"Значение «Сервер» должно быть числом.","min":1,"tooSmall":"Выберите сервер","max":3,"tooBig":"Не корректный сервер","skipOnEmpty":1});}},{"id":"loginform-username","name":"username","container":".field-loginform-username","input":"#loginform-username","error":".form-error","validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Введите Никнейм"});}},{"id":"loginform-password","name":"password","container":".field-loginform-password","input":"#loginform-password","error":".form-error","validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Введите Пароль"});}},{"id":"loginform-recaptcha","name":"reCaptcha","container":".field-loginform-recaptcha","input":"#loginform-recaptcha","error":".form-error","validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Пройдите проверку"});(function(messages){if(!grecaptcha.getResponse()){messages.push('Необходимо заполнить «Проверка».');}})(messages);}}], []);
+});</script></body>
+</html>

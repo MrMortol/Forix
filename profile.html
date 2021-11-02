@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token" content="OTc3VUxWTjVvAnEGeR00QXMGQRN5bhZFVFR4JQUMHWd1e0BiE2cKBw==">
+    <title>Мой профиль - Россия Дрифт</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;amp;subset=cyrillic" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0css/font-awesome.min.css" rel="stylesheet">
+<link href="css/style.min.css" rel="stylesheet"></head>
+<body class="bg-1">
+
+    <div class="mobile-bar">
+        <div class="text-right"><button class="open-bar"></button></div>
+    </div>
+    <div class="overlay"></div>
+    <div class="clearfix">
+        <div class="sidebar">
+    <div class="sidebar__logo">
+        <img src="images/logo-sidebar.png" alt="Россия Дрифт CRMP Logo">
+    </div>
+    <hr class="sidebar__divider">
+    <ul class="sidebar__nav">
+			        <li><a class="sidebar__link sidebar__link_no-icon" style="padding-left:0" href="/profile">
+	            <div class="sidebar__profile">
+	                <div class="hidden-in-mobile"><img class="sidebar__userpic" src="images/sidebar__userpic.jpg" alt=""></div>
+	                <div class="sidebar__nickname">
+	                		                    <p>Bicbai</p>
+	                    <p>TOP</p>
+	                </div>
+	                <button onclick="event.preventDefault();window.location.href='/profile/logout'" class="sidebar__logout" title="Выйти из профиля">Выйти</button>
+	            </div>
+	        </a></li>
+		
+        <li><a class="sidebar__link sidebar__link_home" href="/">Главная</a></li>
+        <li><a class="sidebar__link sidebar__link_news" href="/news">Новости</a></li>
+        <li><a class="sidebar__link sidebar__link_hts" href="/how-to-start">Как начать игру</a></li>
+        <li><a class="sidebar__link sidebar__link_forum" href="http://forum.radmir-rp.ru">Форум</a></li>
+        <li><a class="sidebar__link sidebar__link_shop" href="/pay">Магазин</a></li>
+        <li><a class="sidebar__link sidebar__link_vk" href="https://vk.com/rd.rdmpru">Вконтакте</a></li>
+        <li class="sidebar__active-line"></li>
+    </ul>
+</div>
+<script>
+	var loc = document.location.pathname;
+	var ul = document.getElementsByClassName('sidebar__nav')[0];
+	var links = ul.getElementsByTagName('a');
+	var set = false;
+	if(loc == '/') {
+		links[1].className = links[1].className + ' sidebar__link_active';
+	}
+	else {
+		var re = new RegExp('('+loc+')');
+		for(var i in links) {
+			if(re.exec(links[i].href) != null) {
+				links[i].className = links[i].className + ' sidebar__link_active';
+				set = true;
+				break;
+			}
+		}
+		if(!set) links[0].className = links[0].className + ' sidebar__link_active';
+	}
+</script>
+
+
+
+
+
+        <div class="content-container">
+<div class="row" style="margin-top:40px;margin-bottom:15px">
+	<div class="hidden-xs col-xs-12 col-sm-6 page-title">Личный кабинет</div>
+	<div class="hidden-xs col-sm-6 page-subtitle">Управление аккаунтом</div>
+</div>
+
+<div class="profile">
+	<div class="text-center" style="margin-bottom:25px"><span class="profile__nickname">Bicbai TOP</span><span class="profile__userid">ID 69454</span></div>
+
+	<div class="profile__row row">
+		<div class="profile__column col-md-3">
+			<div class="profile__skin-wrap hidden-xs">
+				<img class="profile__skin" src="images/skins/id 239.png" alt="">
+			</div>
+			<div class="panel">
+				<div class="panel-body">
+											<style>.integrate-vk{display:block;margin:10px 0;line-height:25px;color:white;background:#507299;padding:10px;border-radius:5px}.integrate-vk:hover{color:white}</style>
+						<a href="/vk/auth" class="integrate-vk"><span style="font-size:22px;vertical-align:text-bottom;margin-right:5px" class="fa fa-vk"></span> Интеграция с ВК</a>
+										<ul class="profile__nav">
+						<li class="profile__nav-item"><a href="/change/password" class="profile__nav-link">Сменить пароль</a></li>
+																		<li class="profile__nav-item"><a href="/profile/logout" class="profile__nav-link">Выйти</a></li>										
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="profile__column col-md-9">
+			<div class="profile__row row">
+				<div class="profile__column col-md-3">
+					<div class="panel hidden-xs">
+						<div class="panel-body">
+							<div class="donut-chart">
+								<svg width="75" height="75" xmlns="http://www.w3.org/2000/svg">
+									<g>
+										<title>Игровой уровень</title>
+										<circle r="34" cy="37.5" cx="37.5" stroke-width="7" stroke="#e8e8e8" fill="none"></circle>
+										<circle style="stroke-dasharray:213.6;stroke-dashoffset:213.6" r="34" cy="37.5" cx="37.5" stroke-width="7" stroke="#ffa300" fill="none" class="svg-circle"></circle>
+									</g>
+								</svg>
+								<div class="donut-chart__desc"><p class="donut-chart__number">1</p>уровень</div>
+							</div>
+							<div class="profile__levelup">Осталось <span class="profile__hours">4 </span> часов до нового уровня</div>									
+						</div>
+					</div>
+				</div>
+				<div class="profile__column col-md-9">
+					<div class="panel">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-4 profile__infobox"><p class="profile__key-1">Дата регистрации</p><p class="profile__value-1 color-orange">21.04.2017</p></div>
+								<div class="col-md-4 profile__infobox"><p class="profile__key-1">Последний вход</p><p class="profile__value-1 color-orange">21.04.2017</p></div>
+								<div class="col-md-4 profile__infobox"><p class="profile__key-1">Статус E-Mail</p><p class="profile__value-1 color-red">Не подтвержден</p></div>								<!-- <div class="col-md-3 profile__infobox"><p class="profile__key-1">Состояние</p><p class="profile__value-1 color-red">Офлайн</p></div> -->
+							</div>
+						</div>
+					</div>								
+				</div>
+			</div>
+			<div class="profile__row row">
+				<div class="panel">
+					<div class="panel-body">
+												<div class="col-md-6 col-xs-12">
+							<table class="profile__table">
+								<tr>
+									<td class="profile__table_key">Уровень</td>
+									<td class="profile__table_val">1</td>
+								</tr>
+								<tr>
+									<td class="profile__table_key">Наличные</td>
+									<td class="profile__table_val">500 руб.</td>
+								</tr>
+								<tr>
+									<td class="profile__table_key">Номер дома</td>
+									<td class="profile__table_val">Отсутствует</td>
+								</tr>
+								<tr>
+									<td class="profile__table_key">Фракция</td>
+									<td class="profile__table_val">Отсутствует</td>
+								</tr>
+								<tr>
+									<td class="profile__table_key">Работа</td>
+									<td class="profile__table_val">Отсутствует</td>
+								</tr>
+								<tr>
+									<td class="profile__table_key">Номер бизнеса</td>
+									<td class="profile__table_val">Отсутствует</td>
+								</tr>																																											
+							</table>
+						</div>
+						<div class="col-md-6 col-xs-12">
+							<table class="profile__table">
+								<tr>
+									<td class="profile__table_key">Банковский счет</td>
+									<td class="profile__table_val">0</td>
+								</tr>
+								<tr>
+									<td class="profile__table_key">Ранг</td>
+									<td class="profile__table_val">Отсутствует</td>
+								</tr>
+								<tr>
+									<td class="profile__table_key">Номер телефона</td>
+									<td class="profile__table_val">Нет</td>
+								</tr>
+								<tr>
+									<td class="profile__table_key">Донат - счет</td>
+									<td class="profile__table_val">0</td>
+								</tr>
+								<tr>
+									<td class="profile__table_key">Предупреждения</td>
+									<td class="profile__table_val">0</td>
+								</tr>
+								<tr>
+									<td class="profile__table_key">Баны</td>
+									<td class="profile__table_val">0</td>
+								</tr>																											
+							</table>										
+						</div>									
+					</div>
+				</div>
+			</div>
+			<div class="profile__row row">
+				<div class="panel">
+					<div class="panel-body">
+													<div class="col-md-2 col-xs-6 profile__weapon">
+								<p class="weapon-skill">0%</p>
+								<img src="images/weapons/1.png" class="weapon__image" alt="">
+								<div class="weapon__value" style="height:0px"></div>
+							</div>
+													<div class="col-md-2 col-xs-6 profile__weapon">
+								<p class="weapon-skill">0%</p>
+								<img src="images/weapons/2.png" class="weapon__image" alt="">
+								<div class="weapon__value" style="height:0px"></div>
+							</div>
+													<div class="col-md-2 col-xs-6 profile__weapon">
+								<p class="weapon-skill">0%</p>
+								<img src="images/weapons/3.png" class="weapon__image" alt="">
+								<div class="weapon__value" style="height:0px"></div>
+							</div>
+													<div class="col-md-2 col-xs-6 profile__weapon">
+								<p class="weapon-skill">0%</p>
+								<img src="images/weapons/4.png" class="weapon__image" alt="">
+								<div class="weapon__value" style="height:0px"></div>
+							</div>
+													<div class="col-md-2 col-xs-6 profile__weapon">
+								<p class="weapon-skill">0%</p>
+								<img src="images/weapons/5.png" class="weapon__image" alt="">
+								<div class="weapon__value" style="height:0px"></div>
+							</div>
+													<div class="col-md-2 col-xs-6 profile__weapon">
+								<p class="weapon-skill">0%</p>
+								<img src="images/weapons/6.png" class="weapon__image" alt="">
+								<div class="weapon__value" style="height:0px"></div>
+							</div>
+												
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div></div>
+    </div>
+
+<!-- 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+ -->
+
+
+<script src="js/jquery.js"></script>
+<script src="js/yii.js"></script>
+<script src="js/script.js"></script></body>
+</html>
